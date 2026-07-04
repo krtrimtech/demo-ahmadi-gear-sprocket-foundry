@@ -7,7 +7,7 @@
 // ============================================
 // 1. THREE.JS - 3D INTERACTIVE BACKGROUND
 // ============================================
-(function initHeroScene() {"
+(function initHeroScene() {
   const canvas = document.getElementById('heroCanvas');
   if (!canvas) return;
 
@@ -86,9 +86,9 @@
 
     const gearGroup = new THREE.Group();
     const gears = [];
-    const colors = [0xea580c, 0xc5a059, 0x64748b];
+    const customColors = [0xea580c, 0xc5a059, 0x64748b];
     for (let i = 0; i < 8; i++) {
-      const gear = createGear(colors[i % colors.length]);
+      const gear = createGear(customColors[i % customColors.length]);
       gear.position.set((Math.random() - 0.5) * 22, (Math.random() - 0.5) * 14, (Math.random() - 0.5) * 14 - 5);
       gearGroup.add(gear);
       gears.push({
